@@ -23,12 +23,19 @@ public class AutomatoFinito {
         if (scanner.hasNextLine()) {
             String line = scanner.nextLine();
             curState = line;
+
+            String[] cuts = line.split(";");
+            if (cuts[0] != null && !cuts[0].equals(""))
+                curState = cuts[0];
         }
 
         if (scanner.hasNextLine()) {
             String line = scanner.nextLine();
             String[] cuts = line.split(";");
-            endPoints.addAll(Arrays.asList(cuts));
+            for (String cut : cuts) {
+                if (cut != null && !cut.equals(""))
+                    endPoints.add(cut);
+            }
         }
 
         while (scanner.hasNextLine()) {
@@ -44,7 +51,7 @@ public class AutomatoFinito {
             }
         }
 
-       scanner.close();
+        scanner.close();
     }
 
     public boolean validator(String sentence) {

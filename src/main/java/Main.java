@@ -3,7 +3,7 @@ import java.io.FileNotFoundException;
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
         AutomatoFinito af = new AutomatoFinito();
-        af.loadFromCsv("/home/exd/Documents/1.txt");
+        af.loadFromCsv("C:\\_dev\\test.csv");
 
         String sentence = "abbba";
 
