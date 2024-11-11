@@ -2,7 +2,7 @@ import java.io.FileNotFoundException;
 
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
-        AutomatoFinito af = new AutomatoFinito();
+        AFD af = new AFD();
         af.loadFromCsv("C:\\_dev\\test.csv");
 
         String sentence = "abbba";

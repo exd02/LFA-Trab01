@@ -5,12 +5,12 @@ import java.io.FileNotFoundException;
 import java.util.*;
 
 @AllArgsConstructor
-public class AutomatoFinito {
+public class AFD {
     private Set<String> endPoints;
     private List<Transition> transitionList;
     private String curState;
 
-    public AutomatoFinito() {
+    public AFD() {
         this.endPoints = new HashSet<>();
         this.transitionList = new ArrayList<>();
         curState = "";
